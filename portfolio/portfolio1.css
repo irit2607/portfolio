@@ -305,6 +305,9 @@ footer a {
 	.home .home-content .block h1{
 		font-size: 200%;
 	}
+        footer p:nth-child(1){
+         font size: 21px;
+}
 	}
 	
 /*.........*/
