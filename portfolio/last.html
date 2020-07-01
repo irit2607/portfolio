@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image gallery</title>
+  <style type="text/css">
+    body {
+  margin: 0;
+  background-image: url("https://previews.123rf.com/images/flas100/flas1001802/flas100180200103/96476174-abstract-light-blue-watercolor-background-painted-on-watercolor-paper.jpg");
+  background-size: cover;
+}
+.t{
+  font-size: 33px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  height: 80vh;
+
+}
+
+.grid img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
+}
+@media(max-width: 700px){
+  .grid img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  height: 100vh;
+  
+}
+}
+
+
+
+
+
+  </style>
+  
+</head>
+<body>
+  <div class="t">
+    <p>Photo Gallery</p>
+  </div>
+  <div class="grid">
+  <img src="D:\portfolio\a5.png">
+  <img src="D:\portfolio\a3.png">
+  <img src="D:\portfolio\a22.png">
+  <img src="D:\portfolio\a11.png">
+  <img src="D:\portfolio\a4.png">
+  <img src="D:\portfolio\a6.jpg">
+
+  
+</div>
+    <script type="text/javascript">
+      const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
+
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
+})
+
+lightbox.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return
+  lightbox.classList.remove('active')
+})
+    </script>
+
+</body>
+</html>
