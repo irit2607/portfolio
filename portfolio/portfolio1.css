@@ -295,5 +295,16 @@ footer a {
 		font-size: 25px;
 	}
 }
+	@media (max-width: 576px){
+		label.logo{
+	        font-size: 20px;
+       }
+       .home{
+		padding: 50px;
+	}
+	.home .home-content .block h1{
+		font-size: 200%;
+	}
+	}
 	
 /*.........*/
