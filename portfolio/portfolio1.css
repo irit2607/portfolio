@@ -87,19 +87,15 @@ a.active, a:hover{
     border-left: 5px solid #000000;
     margin-top: 50px;
 }
-.home .home-content .block h6{
-    color: #000000;
-    font-size: 28px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-}
+
 .home .home-content .block h1{
     color: #000000;
     font-size: 370%;
     font-weight: 600;
     margin: 0;
     padding: 0;
+	font-family: 'Roboto Slab', serif;
+
     
 }
 
@@ -109,6 +105,8 @@ a.active, a:hover{
     font-weight: 500;
     margin: 0;
     padding: 0;
+	font-family: 'Roboto Slab', serif;
+
     
 }
 .home .home-content .block .button{
@@ -295,10 +293,11 @@ footer a {
 		font-size: 25px;
 	}
 }
-	@media (max-width: 576px){
+	@media (max-width: 500px){
 		label.logo{
-	        font-size: 20px;
-		line hieght: 10px;	
+                        font-size: 20px;
+                       padding-right: 4% ; 
+       	
        }
        .home{
 		padding: 50px;
