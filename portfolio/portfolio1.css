@@ -307,8 +307,7 @@ footer a {
 		font-size: 200%;
 	}
         footer p:nth-child(1){
-         font size: 17px;
-}
+	font-size: 20px;
 	}
 	
 /*.........*/
