@@ -3,17 +3,18 @@
 <head>
 		<meta charset="utf-8">
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>About</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   
+  
+	<title>About</title>
 	<style type="text/css">
-	body{
-		background-image: url("https://image.freepik.com/free-vector/molecular-structure-background_1262-7390.jpg");
-		background-size: cover;
-	}
-
+       body{
+    background-image: url("https://image.freepik.com/free-vector/molecular-structure-background_1262-7390.jpg");
+    background-size: cover;
+  }
 	.about-container{
 	
 	width: 80%;
@@ -21,14 +22,16 @@
 	background-image: url("https://www.pixeden.com/media/k2/galleries/131/004-subtle-light-pattern-background-texture.jpg");
 	border-radius: 20px;
 	box-shadow: 2px 2px 12px #8fbc8f;
+	
 	display: flex;
-	margin: -7% auto 20px auto;
+	  margin: 2% auto 20px auto;
 	position: relative;
 	justify-content: space-evenly;
     align-items: center;
 
 
 }
+
 .about-container img{
 	height: 290px;
 	border-radius: 4px;
@@ -49,7 +52,7 @@
 }	
 .about-text p:nth-child(2),
 .about-text p:nth-child(3),
-		.about-text p:nth-child(4){
+.about-text p:nth-child(4){
 	
 	font-family: 'Merriweather', serif;;
 	font-size: 21px;
@@ -78,9 +81,6 @@
 }	
 .about-container .about-text .button{
 	padding-top: 10px;
-}
-
-
 }
 
 .social-icons a{
@@ -144,7 +144,8 @@
 	color: #2b2b2b;
 	font-size: 20px;
 
-}	
+}
+
 
 
 
@@ -168,7 +169,7 @@
 	font-size: 19px;
 }
 .about-text p:nth-child(3),
-	.about-text p:nth-child(4){
+.about-text p:nth-child(4){
 	font-size: 19px;
 }
 	
@@ -193,16 +194,26 @@
 }
 .about-text p:nth-child(2),
 .about-text p:nth-child(3),
-	.about-text p:nth-child(4){
+.about-text p:nth-child(4){
 	font-size: 20px;
 }
-	
-	.about-container .about-text .button a{
+  	
+
+}
+	@media (max-width: 576px){
+		footer p:nth-child(1){
+	font-size: 20px;
+}
+.about-container .about-text .button a{
 	 margin: 2%
 
 	}
-  	
-
+	.logo{
+		padding-top: 0;
+	}
+	.about-text p:nth-child(1){
+		padding-top: 6%;
+	}
 }
 	
 
@@ -213,30 +224,61 @@
 
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">IRIT KUSHWAHA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="portfolio.html">Home </a>
+      </li>
+      
+      <li class="nav-item  active">
+        <a class="nav-link" href="about.html">ABOUT<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="education.html">EDUCATIONAL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="exp.html">EXPERIENCE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="last.html">PHOTO</a>
+      </li>
+
+          
+        </div>
+      
+    </ul>
+    
+  </div>
+</nav>
+
 	
       <div class="about-container" id="about">
 		<img src="https://user-images.githubusercontent.com/67689773/86312564-a3c8dc00-bc40-11ea-85fa-6d011f83807d.jpg" alt="dr">
 		<div class="about-text">
 			<p>About</p>
 			<p>
-			 Dr. Debdatta Ratna.
+			Hello, My self Dr. Debdatta Ratna.
 			Current institution: Defence Research and Development Organisation (DRDO).
 			Present Position: Scientist “F” Head, Directorate of Polymer Science and Technology, Naval Materials Research Research Laboratry.Work experience of 22 years.</p>
 			<p>Skills and Expertise:-<br>
-			*Epoxy Resins<br>*Polymer<br>*Nanocomposites<br>*Polymeric Materials
+			Epoxy Resins<br>Polymer<br>Nanocomposites<br>Polymeric Materials
 		</p>
-			<p>Summary of Publication<br>
-		Journals:94, Patent:06, Book:03, Book Chapter:03, Conference:45</p>
+		<p>Journals : 94 Patent : 06 Book : 3 Book Chapter : 3 Conference : 45</p>
 		<div class="button">
 						<a href="book.html">Book</a>
 						<a href="patent.html">Patent</a>
-			                        <a href="paper.html">Reviewed Journal</a>
+						<a href="paper.html">Reviewed Journal</a>
 						
 					</div>
 	</div>
 </div>
-    
-	
+   
 <div class="a-social-b">
   <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
   <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -244,14 +286,19 @@
   <a href="https://www.youtube.com/watch?v=D86jDLamFuA"><i class="fab fa-youtube"></i></a>
   
   </div>
-  
 
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-   
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-	
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 		
+})
+
+    </script>
+			
 
 
 </body>
