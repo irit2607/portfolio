@@ -5,39 +5,61 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  
-  <head>
-  <title>Education</title>
+ 
+  <title>Image gallery</title>
   <style type="text/css">
-    body{
-      background-image: url("https://image.freepik.com/free-vector/molecular-structure-background_1262-7390.jpg");
-      background-size: cover;
-      height: 80vh;
-    }
-    .edu p:nth-child(1){
-      font-family: 'Slabo 27px', serif;
-      font-size:45px;
-      text-align: center;
-      color: #000000;
-      font-weight: bold;
-    }
-    .edu p:nth-child(2),
-    .edu p:nth-child(3),
-    .edu p:nth-child(4)
-    {
-      font-family: 'Slabo 27px', serif;
-      font-size:38px ;
-      width: 80%;
-      padding-left: 8%;
-      justify-content: flex-start;
-      color: #000000;
-      margin: 2px 2px;
-    }
-    .social-icons a{
-  width: 60px;
-  height: 60px;
+    body {
+  margin: 0;
+  background-image: url("https://image.freepik.com/free-vector/molecular-structure-background_1262-7390.jpg");
+  background-size: cover;
+}
+.t{
+  font-size: 33px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  height: 80vh;
+
+}
+
+.grid img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
+}
+.social-icons a{
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,56 +119,38 @@
   font-size: 20px;
 
 }
-    @media(max-width: 1000px){
-      
-      .edu p:nth-child(1){
-        font-size: 55px;
-        font-weight: bold;
 
-      }
-      .edu p:nth-child(2),
-    .edu p:nth-child(3),
-    .edu p:nth-child(4){
-      font-size: 50px;
-    }
-    .a-social-b a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:100px;
-  height: 100px;
-
-    }
-    .a-social-b i{
-  color: #2b2b2b;
-  font-size: 30px;
-
+@media(max-width: 700px){
+  .grid img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  
 }
-  }
-  /*  @media(max-width: 600px){
-      body{
-        background-size: cover;
-      }
-      
-      
-      .edu p:nth-child(2),
-    .edu p:nth-child(3),
-    .edu p:nth-child(4){
-      font-size: 70px;
-      margin-left: 3%;
-    }
-    .a-social-b a{
-  display: flex;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
   justify-content: center;
-  align-items: center;
-  width:100px;
-  height: 100px;
-    }*/
+  align-content: center;
+  grid-gap: 10px;
+  height: 100vh;
+  
+}
+}
+
+ 
+
+
+
+
+
+
 
   </style>
+  
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">IRIT KUSHWAHA</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -161,14 +165,14 @@
       <li class="nav-item ">
         <a class="nav-link" href="about.html">ABOUT</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="education.html">EDUCATIONAL<span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" href="education.html">EDUCATIONAL</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ">
         <a class="nav-link" href="exp.html">EXPERIENCE</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="last.html">PHOTO</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="last.html">PHOTO<span class="sr-only">(current)</span></a>
       </li>
 
           
@@ -179,33 +183,56 @@
   </div>
 </nav>
 
-  <div class="edu">
-    <p>Education</p>
-    
-    <p>
-  *Ph.D : Polymer Science from Material Science Centre, Indian Institute of
-Technology, Kharagpur in 1999
-Thesis: - Development of Acrylate based Toughening Agents for Epoxy Resin.<br><br>
-*M.Tech: Materials Science and Engineering from Material Science Centre, Indian Institute of Technology, Kharagpur in 1993 Specialization in Polymer Science.<br><br>
-*M.Sc : Chemistry (First Rank) from Department of Chemistry, Indian Institute of
-      Technology, Kharagpur in 1991 Specialization in Physical Chemistry.<br><br></p>
-</div>
+  <div class="t">
+    <p>Photo Gallery</p>
+  </div>
+  <div class="grid">
+  <img src="https://user-images.githubusercontent.com/67689773/86312572-a88d9000-bc40-11ea-8af9-084266900a85.jpg">
+  <img src="https://user-images.githubusercontent.com/67689773/86312117-9b23d600-bc3f-11ea-93c9-6b0ff26bea19.png">
+  <img src="https://user-images.githubusercontent.com/67689773/86312108-93fcc800-bc3f-11ea-8535-24742ef97509.png">
+  <img src="https://user-images.githubusercontent.com/67689773/86312091-85aeac00-bc3f-11ea-912f-f9d220073822.png">
+  <img src="https://user-images.githubusercontent.com/67689773/86312066-74659f80-bc3f-11ea-86c4-46f064f426a3.png">
+  <img src="https://user-images.githubusercontent.com/67689773/86311839-e7bae180-bc3e-11ea-82fa-a9db34ff2623.png">
 
-<div class="a-social-b">
+  
+</div>
+  <div class="a-social-b">
   <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
   <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
   <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
   <a href="https://www.youtube.com/watch?v=D86jDLamFuA"><i class="fab fa-youtube"></i></a>
   
   </div>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    
 
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript">
+      const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
 
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
+})
+
+lightbox.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return
+  lightbox.classList.remove('active')
+})
+    </script>
 
 </body>
 </html>
